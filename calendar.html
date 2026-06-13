@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Cormorant+Garamond:wght@400;500;600&family=Special+Elite&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="calendar-page">
+
+    <div class="memory-text" id="memoryText">
+        tap on each cookie<br>
+        to taste its flavor!
+    </div>
+
+    <button class="cookie cookie-jan" onclick="showMemory('january')"><img src="january.png"></button>
+    <button class="cookie cookie-feb" onclick="showMemory('feb')"><img src="feb.png"></button>
+    <button class="cookie cookie-march" onclick="showMemory('march')"><img src="march.png"></button>
+    <button class="cookie cookie-april" onclick="showMemory('april')"><img src="april.png"></button>
+    <button class="cookie cookie-may" onclick="showMemory('may')"><img src="may.png"></button>
+    <button class="cookie cookie-june" onclick="showMemory('june')"><img src="june.png"></button>
+    <button class="cookie cookie-july" onclick="showMemory('july')"><img src="july.png"></button>
+    <button class="cookie cookie-aug" onclick="showMemory('aug')"><img src="aug.png"></button>
+    <button class="cookie cookie-sept" onclick="showMemory('sept')"><img src="sept.png"></button>
+    <button class="cookie cookie-oct" onclick="showMemory('oct')"><img src="oct.png"></button>
+    <button class="cookie cookie-nov" onclick="showMemory('nov')"><img src="nov.png"></button>
+    <button class="cookie cookie-dec" onclick="showMemory('dec')"><img src="dec.png"></button>
+
+    <a href="index.html" class="takeout-box calendar-takeout">
+        <div class="takeout-text">
+            would you like<br>
+            to take this to go?
+        </div>
+
+        <img src="closed-box.png" class="closed-box" alt="closed takeout box">
+        <img src="open-box.png" class="open-box" alt="open takeout box">
+    </a>
+
+    <script>
+        const memories = {
+            january: "i remember coming back from winter break in january and missing you so much. i was so happy to build a lego with you finally, and we got to eat great pizza! i was super excited for our future together.",
+            feb: "it was valentine's day and our three month! despite being sick, you still showed up and did the work of driving us to and through sf, as well as to mt. tam. although it was gray outside and you were the worst you'd ever felt, i don't think any part of that weekend was ruined. i was so excited to give you our legos—and super touched when you cried, too. we still have to go to mt. tam together when it's sunny!",
+            march: "we fought so bad i remember here at this zoo in march. later did we find out that it was a place of despair and doom. we should've known. i was so mad at you, but after we talked and cried at that table, we still managed to take every picture we didn't take that day and experience a lot more. just hanging out with you after, in your car at the beach, was so fun before having to leave for spring break.",
+            april: "the japanese tea garden was something i'd wanted to do for a while, and i was glad to do it with you in april. the rain made the garden more beautiful, and i'll never forget dropping my clipper in the koi pond. thank you for getting that gardener for me.",
+            may: "the big 831 trip in may! it was so fun seeing all the sights with you and getting to circle back to our first month's date. we managed to do everything we wanted to do and more. we got to see otters, too, even though they were so far away, and i remember we spent twenty minutes looking for that bench—with the sun setting quickly and a long drive ahead of us. i'm glad we found it in the end.",
+            june: "your birthday month! i hope that this week is the best week of your life!!!!!",
+            july: "bro i barely knew you during last july. i remember moore put you in my fam and i didn't even know you were on the team. well you weren't on the team but then ig he asked you to be. i remember i thought u were someone i wouldn't get along with that well but you integrated yourself so seamlessly, and i felt like for the first time i actually got to know you a little bit better.",
+            aug: "this cookie is a car because one of the more notable things that happened last september between you and i was otherside retreat, wherein we both left earlier and that three hour car ride was completely silent. i needed to pee so bad, and i remember i was coming down with some sort of flu, too. thanks for driving me home.",
+            sept: "things really started to pick up in september when we went to the 2hollis concert. i think i had a midterm that week, too, but we still went. at the time, i didn't think we'd get so close, but i had a lot of fun! i also remember you saying you didn't like taco bell that much, yet you still went afterwards. labubus also formed around this time, too.",
+            oct: "project afx in october... it really speaks for itself. i think that this was when we started working together a lot more. even outside of project afx, planning the labubu socials with you made me nostalgic for my times with yvonne. i didn't think i'd meet anyone who'd make me feel that way again! you were super collaborative, brimming with ideas, and brought me the support i needed to make it through that month.",
+            nov: "everything happened this month bro. (as u know) my favorite date at the snoopy museum, with the fright fest following right after. it was a lot of driving on you, but that day was one of the best ones in my life. i'm not sure how you managed to be at both the worst and the best days of my life, but that's just your duality, i guess. we also started dating during this month, too, and i wanted to be private soooo bad... i'm not sure what happened.",
+            dec: "our first month anniversary at the monterey bay aquarium was a great way to segue into winter break. it was so much fun. it was a long, long break, with time zones and distance and everything, and i really missed you throughout it all."
+        };
+
+        function showMemory(month) {
+            const memoryText = document.getElementById("memoryText");
+            memoryText.textContent = memories[month];
+            memoryText.classList.remove("memory-pop");
+            void memoryText.offsetWidth;
+            memoryText.classList.add("memory-pop");
+        }
+    </script>
+
+</body>
+
+</html>
